@@ -1,0 +1,303 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #CCA7FC;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: url('images/shape-group--desktop.png') no-repeat center center;
+}
+
+/* Background image styles */
+.container {
+    background-size: cover;
+    background-position: center;
+}
+
+/* Main content */
+.content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    /* max-width: 600px; */
+    width: 100%;
+}
+
+/* Headline */
+.headline {
+    font-family: 'Old Standard TT', serif;
+    font-size: 56px;
+    font-weight: 300;
+    color: #F8EEEC;
+    margin-bottom: 14px;
+    line-height: 1;
+}
+
+.headline em {
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* CTA text */
+.cta-text {
+    color: #000000;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 18px;
+    leading-trim: NONE;
+    line-height: 140%;
+    letter-spacing: -2%;
+    text-align: center;
+    margin-bottom: 36px;
+
+}
+
+/* Form styles */
+.email-form {
+    margin-bottom: 3rem;
+}
+
+.form-group {
+    display: flex;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    background: transparent;
+    border-radius: 6px;
+    padding: 4px;
+    box-shadow: none;
+
+}
+
+.email-input {
+    flex: 1;
+    border: 1px solid #000000;
+    padding: 16px 20px;
+    font-size: 1rem;
+    background: transparent;
+    color: #333;
+    outline: none;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+}
+
+.email-input::placeholder {
+    color: #000000;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+}
+
+.signup-btn {
+    background: #000;
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    min-width: 120px;
+    border-radius: 6px;
+    box-shadow: 
+        1px 2px 4px 0px #0000002B,
+        5px 6px 8px 0px #00000026,
+        11px 14px 11px 0px #00000017,
+        20px 25px 13px 0px #00000008,
+        32px 40px 14px 0px #00000000;
+
+}
+
+.signup-btn:hover {
+    background: #333;
+    transform: translateY(-1px);
+}
+
+.signup-btn:active {
+    transform: translateY(0);
+}
+
+/* Form message */
+.form-message {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    min-height: 20px;
+}
+
+.form-message.success {
+    color: #4CAF50;
+}
+
+.form-message.error {
+    color: #f44336;
+}
+
+/* Brand section */
+.brand-section {
+    margin-top: 2rem;
+}
+
+.brand-name {
+    
+}
+
+.coming-soon {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: #000000;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+/* Social link */
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #F8F8F8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: opacity 0.3s ease;
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    leading-trim: NONE;
+    line-height: 140%;
+    letter-spacing: -2%;
+    vertical-align: middle;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-offset: 0%;
+    text-decoration-thickness: 0%;
+    text-decoration-skip-ink: auto;
+
+}
+
+.social-link:hover {
+    opacity: 0.8;
+}
+
+.social-link:visited {
+    color: #F8F8F8;
+}
+
+.instagram-icon {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 42px 24px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background: url('images/shape-group--mobile.png') no-repeat center center;
+        background-size: cover;
+    }
+    
+    .content {
+        text-align: left;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .headline {
+        font-size: 45px;
+        margin-bottom: 1rem;
+        padding-right: 25vw;
+    }
+    
+    .cta-text {
+        font-size: 14px;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+    
+    .form-group {
+        gap: 8px;
+        background: transparent;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    .email-input {
+        border: 1px solid #000000;
+        border-radius: 6px;
+        padding: 16px;
+    }
+
+    .email-form{
+        margin-bottom: 1rem;
+    }
+    
+    .signup-btn {
+        padding: 16px;
+    }
+    
+    .brand-name {
+        width: 112px;
+    }
+
+    .brand-name img{
+        width: 100%;
+    }
+    
+    .coming-soon {
+        font-size: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .social-link {
+        font-size: 0.9rem;
+    }
+   
+}
+
+/* Loading state */
+.loading .signup-btn {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.loading .signup-btn::after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s ease-in-out infinite;
+    margin-left: 8px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
